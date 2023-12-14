@@ -17,6 +17,8 @@ public partial class Producto
 
     public int Stock { get; set; }
 
+    public string UrlImagen { get; set; }
+
     public int CategoriaId { get; set; }
 
     public virtual ICollection<CarritoTemporal> CarritoTemporals { get; set; } = new List<CarritoTemporal>();

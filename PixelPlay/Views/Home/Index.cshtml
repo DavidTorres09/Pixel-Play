@@ -2,8 +2,9 @@
     ViewData["Title"] = "Login";
 }
 
-<link rel="stylesheet" href="~/css/index.css" />
-<link rel="script" href="~/js/index.js" />
+@model PixelPlay.Models.Usuario
+
+<link rel="stylesheet" href="~/css/login.css" />
 
 <div class="container">
     <div class="card mt-5">
@@ -13,19 +14,20 @@
         </div>
         <div class="card-body">
             <p class="text-center text-muted">¿No tienes una cuenta? Regístrate <a href="#">aquí</a>.</p>
-            <form>
+            <form method="post" asp-action="ValidarUsuario" asp-controller="Home">
                 <div class="mb-3">
-                    <label for="username" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="username" placeholder="Ingrese su email" required>
+                    <label for="correo" class="form-label">Email</label>
+                    <input name="correo" type="email" class="form-control" placeholder="Ingrese su email" required>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                    <label for="contraseña" class="form-label">Contraseña</label>
+                    <input name="contraseña" type="password" class="form-control" placeholder="Ingrese su contraseña" required>
                 </div>
                 <div class="d-grid">
                     <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>

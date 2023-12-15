@@ -27,7 +27,7 @@ namespace PixelPlay.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = _dbContext.usuarios.FirstOrDefault(u => u.CorreoElectronico == correo && u.Contraseña == contraseña);
+                var user = _dbContext.Usuarios.FirstOrDefault(u => u.CorreoElectronico == correo && u.Contraseña == contraseña);
 
                 if (user != null)
                 {

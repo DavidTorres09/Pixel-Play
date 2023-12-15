@@ -3,7 +3,35 @@
 }
 
 <div>
-    @await Html.PartialAsync("~/Views/Shared/navUser.cshtml")
+    @await Html.PartialAsync("~/Views/Shared/navAdmin.cshtml")
 </div>
 
-<h1> ADMIIIIIN</h1>
+@model List<Producto>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre del Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Imagen</th>
+            <th>Categoría</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+        {
+            <tr>
+                <td>@producto.ProductoId</td>
+                <td>@producto.NombreProducto</td>
+                <td>@producto.Descripcion</td>
+                <td>@producto.Precio</td>
+                <td>@producto.Stock</td>
+                <td>@producto.UrlImagen</td>
+                <td>@producto.Categoria.NombreCategoria</td>
+            </tr>
+        }
+    </tbody>
+</table>

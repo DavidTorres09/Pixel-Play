@@ -1,16 +1,24 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PixelPlay.Models;
+using System.Linq;
 
-namespace PixelPlay.Controllers
+public class Admin : Controller
 {
-    public class Admin : Controller
+    private readonly PixelPlayContext _context;
+
+    public Admin(PixelPlayContext context)
     {
+        _context = context;
+    }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+    public IActionResult Index()
+    {
+        var productosConCategoria = _context.Productos
+        .Include(p => p.Categoria)
+        .ToList();
 
 
+        return View(productosConCategoria);
     }
 }

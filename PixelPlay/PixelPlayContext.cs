@@ -8,14 +8,14 @@ public class PixelPlayContext : DbContext
     {
     }
 
-    public DbSet<Usuario> usuarios { get; set; }
-    public DbSet<CategoriasProducto> categorias { get; set; }
-    public DbSet<Producto> producto { get; set; }
-    public DbSet<Pedido> pedidos { get; set; }
-    public DbSet<DetallesPedido> detallesPedidos { get; set; }
-    public DbSet<ComentariosProducto> comentariosProductos { get; set; }
-    public DbSet<CarritoTemporal> carritoTemporal { get; set; }
-    public DbSet<HistorialCompra> historialCompras { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<CategoriasProducto> CategoriasProductos { get; set; }
+    public DbSet<Producto> Productos { get; set; }
+    public DbSet<Pedido> Pedidos { get; set; }
+    public DbSet<DetallesPedido> DetallesPedido { get; set; }
+    public DbSet<ComentariosProducto> ComentariosProductos { get; set; }
+    public DbSet<CarritoTemporal> CarritoTemporal { get; set; }
+    public DbSet<HistorialCompra> HistorialCompras { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

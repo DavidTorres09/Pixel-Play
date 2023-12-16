@@ -1,33 +1,290 @@
-﻿@{
-    ViewData["Title"] = "Login";
-}
+<!DOCTYPE html>
+<html lang="en">
 
-@model PixelPlay.Models.Usuario
+<head>
 
-<link rel="stylesheet" href="~/css/login.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
 
-<div class="container">
-    <div class="card mt-5">
-        <div class="card-header">
-            <img src="https://th.bing.com/th/id/OIG.2h13.ZkFImqOH6bL_jmq?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Logo de PixelPlay" class="login-logo" />
-            <h3 class="text-center">Iniciar Sesión en Pixel Play</h3>
-        </div>
-        <div class="card-body">
-            <p class="text-center text-muted">¿No tienes una cuenta? Regístrate <a href="#">aquí</a>.</p>
-            <form method="post" asp-action="ValidarUsuario" asp-controller="Home">
-                <div class="mb-3">
-                    <label for="correo" class="form-label">Email</label>
-                    <input name="correo" type="email" class="form-control" placeholder="Ingrese su email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="contraseña" class="form-label">Contraseña</label>
-                    <input name="contraseña" type="password" class="form-control" placeholder="Ingrese su contraseña" required>
-                </div>
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                </div>
-            </form>
+    <title>PixelPlay</title>
 
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
-</div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png" width="200" height="50">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="products.html">Nuestros Productos</a></li>
+                            <li class="scroll-to-section"><a href="about.html">¿Quiénes somos?</a></li>
+                            <li class="scroll-to-section"><a href="contact.html">Contáctanos</a></li>
+                        </ul>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h4>Somos PixelPlay</h4>
+                                <span>¡La mejor tienda de videojuegos!</span>
+                                <div class="main-border-button">
+                                    <a href="#">Explora nuestros productos!</a>
+                                </div>
+                            </div>
+                            <img src="assets/images/cat-index.jpg" width="300" height="615">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>VideoJuegos</h4>
+                                            <span>Tenemos tus juegos favoritos</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Videojuegos</h4>
+                                                <p>Encuentro tus juegos favoritos o descubres nuevos.
+                                                </p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Ver Productos</a> <!-- Redirigir a Productos -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/cat-juego1.jpg" width="293" height="293">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Consolas</h4>
+                                            <span>Con las mejores consolas</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Consolas</h4>
+                                                <p>Con lo último en tecnologia, sin olvidar los clásicos de la infancia.
+                                                </p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Ver Productos</a> <!-- Redirigir a Productos -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/cat-consolas.jpg" width="293" height="293">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Componentes</h4>
+                                            <span>Encuentro todo el hardware gaming que necesites.</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Componentes</h4>
+                                                <p>Encuentra desde ratones gaming hasta tarjetas de video.
+                                                </p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Ver Productos</a> <!-- Redirigir a Productos -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/cat-perifericos.jpg" width="293" height="293">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Accesorios</h4>
+                                            <span>Decora tu set gamer con los mejores acceoserios</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Accesorios</h4>
+                                                <p>Para ti o para regalar un detalle, encuentras los mejores accesorios.
+                                                </p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Ver Productos</a> <!-- Redirigir a Productos -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/cat-accesorios.jpg" width="293" height="293">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Explore Area Starts ***** -->
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <h2>¡Explora nuestros productos!</h2>
+                        <span>En PixelPlay, estamos dedicados a brindarte lo mejor del mundo digital. Nuestra selección
+                            de videojuegos abarca todos los géneros y plataformas, asegurando que cada jugador encuentre
+                            su aventura virtual perfecta. Desde emocionantes títulos de acción hasta juegos de rol
+                            inmersivos, nuestra colección está siempre actualizada con los últimos lanzamientos y los
+                            clásicos atemporales. Experimenta el juego como nunca antes en PixelPlay — donde cada píxel
+                            cuenta una historia.</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i>
+                            <p>Sumérgete en la Experiencia de Juego Definitiva</p>
+                        </div>
+                        <p>Únete a nuestra comunidad para discutir estrategias, compartir reseñas y conectar con otros
+                            jugadores. Creemos en el poder del juego y estamos comprometidos a ofrecerte contenido de
+                            juego de alta calidad. </p>
+                        <p>Si eres un jugador dedicado que busca mejorar su colección o un
+                            recién llegado ansioso por comenzar tu viaje de juego, PixelPlay es tu destino único</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="leather">
+                                    <h4>Videojuegos</h4>
+                                    <span>De 1 jugador o multijugador</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="first-image">
+                                    <img src="assets/images/juegos.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="second-image">
+                                    <img src="assets/images/consolas.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="types">
+                                    <h4>Consolas</h4>
+                                    <span>Para gamers y coleccionistas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Explore Area Ends ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="under-footer">
+            <p>Página desarrollada por Grupo 3, Proyecto Final de curso.
+                <br>Se utilizó una plantilla gratis desarrollada por: <a href="https://templatemo.com" target="_parent"
+                    title="free css templates">TemplateMo</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
